@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goodrich Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #c9a84c;
+      --dark: #1a1a1a;
+      --light: #f5f2ec;
+    }
+
+    body {
+      background: var(--dark);
+      color: var(--light);
+      font-family: 'Lato', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .wordmark {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 5vw, 3rem);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    .tagline {
+      font-size: 0.75rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--light);
+      opacity: 0.5;
+      margin-bottom: 2.5rem;
+    }
+
+    .frame {
+      position: relative;
+      max-width: 860px;
+      width: 100%;
+    }
+
+    .frame::before {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border: 1px solid var(--gold);
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.3;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .wordmark { animation: fadeUp 0.8s ease both; }
+    .tagline   { animation: fadeUp 0.8s 0.15s ease both; }
+    .frame     { animation: fadeUp 0.9s 0.3s ease both; }
+    footer     { animation: fadeUp 0.8s 0.5s ease both; }
+  </style>
+</head>
+<body>
+
+  <div class="wordmark">Goodrich Group</div>
+  <div class="tagline">goodrichgroup.com &nbsp;·&nbsp; Coming Soon</div>
+
+  <div class="frame">
+    <img
+      src="ChatGPT_Image_Mar_19__2026__11_06_48_AM.png"
+      alt="Goodrich Group"
+    />
+  </div>
+
+  <footer>&copy; 2026 Goodrich Group</footer>
+
+</body>
+</html>
